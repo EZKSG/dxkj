@@ -87,18 +87,18 @@ function Word改宏的宏() {
     yourGraduationTime = '2014.06';
     //你的入学时间
     yourAdmissionTime = '2010.09';
-    
+
     // 随机生成变量1，为数字在10到30之间
-var variable1 = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
-// 随机生成变量2，小于变量1且大于8
-var variable2 = Math.floor(Math.random() * (variable1 - 9)) + 9;
-// 计算变量3，等于变量2减7
-var variable3 = variable2 - 7;
-// 你的填表日期
-var yourFillingDate = " " + variable1;
-// 你的公示时间，等于“2023.07.” + 变量3 + “-” + “2023.07.” + 变量2
-var yourFairShowTime = "2023.07." + variable3.toString().padStart(2, '0') + "-2023.07." + variable2.toString().padStart(2, '0');
-    
+    variable1 = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+    // 随机生成变量2，小于变量1且大于8
+    variable2 = Math.floor(Math.random() * (variable1 - 9)) + 9;
+    // 计算变量3，等于变量2减7
+    variable3 = variable2 - 7;
+    // 你的填表日期
+    yourFillingDate = " " + variable1;
+    // 你的公示时间，等于“2023.07.” + 变量3 + “-” + “2023.07.” + 变量2
+    yourFairShowTime = "2023.07." + variable3.toString().padStart(2, '0') + "-2023.07." + variable2.toString().padStart(2, '0');
+
     //
     /**
      * 
@@ -152,8 +152,8 @@ var yourFairShowTime = "2023.07." + variable3.toString().padStart(2, '0') + "-20
         yourIdNumber = matchResult1[1].trim();
     } else if (matchResult2 && matchResult2[1]) {
         yourIdNumber = matchResult2[1].trim();
-    } 
-    
+    }
+
     matchResult = yourIdNumber.match(/^\d{6}(\d{4})(\d{2})/);
     if (matchResult) {
         birthYear = matchResult[1]; // 匹配结果的第一个捕获组是出生年份
